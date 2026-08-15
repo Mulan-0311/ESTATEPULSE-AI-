@@ -1,0 +1,6 @@
+{
+  "name": "EstatePulse AI",
+  "description": "AI-powered property valuation, predictive analytics, comparable analysis, neighborhood heatmaps, and investment intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
