@@ -1,20 +1,37 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# EstatePulse AI
 
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/b838b78f-b791-4a56-a206-e37f58f8554f
+EstatePulse AI is a high-fidelity real estate valuation and analytics web platform. It integrates AI-powered valuation, property investment analytics, and an AI conversational advisor into a unified user experience.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+2. Set your Gemini API key:
+   Create a `.env.local` file in the root directory and add:
+   ```bash
+   GEMINI_API_KEY="your_api_key_here"
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+## How to Deploy to Vercel
+
+Since this is a Node.js/React project, Vercel is the perfect place to deploy it.
+
+1. **Push your code to GitHub:** Ensure your latest changes are pushed to your GitHub repository.
+2. **Go to Vercel:** Log in to [Vercel](https://vercel.com) and click **Add New... > Project**.
+3. **Import Repository:** Select your `ESTATEPULSE-AI` repository from GitHub.
+4. **Configure Project:**
+   - **Framework Preset:** Vercel should automatically detect **Vite** or **Other**.
+   - **Environment Variables:** Expand the "Environment Variables" section and add:
+     - Name: `GEMINI_API_KEY`
+     - Value: `<Your Actual Gemini API Key>`
+5. **Deploy:** Click **Deploy**. Vercel will build your app and provide you with a live URL!
+
+*(Note: We have already moved `requirements.txt` to the `backend/` folder so Vercel builds the frontend correctly without failing on Python dependencies).*
